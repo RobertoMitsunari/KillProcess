@@ -50,7 +50,7 @@ public class ProcessController {
 					System.err.println(e1.getMessage());
 				}
 			} else {
-				System.err.println("Comando not find");
+				System.err.println(e.toString());
 			}
 
 		}
@@ -66,8 +66,8 @@ public class ProcessController {
 			cmdPid = "TASKKILL /PID ";
 			cmdNome = "TASKKILL /IM ";
 		} else if (os.equals("Linux")) {
-			cmdPid = "KILL ";
-			cmdNome = "PKILL ";
+			cmdPid = "kill ";
+			cmdNome = "pkill ";
 		}
 
 		int pid = 0;
